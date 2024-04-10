@@ -3,10 +3,10 @@ import { createStore } from "vuex";
 
 export default defineNuxtPlugin((nuxtApp) => {
   const store = createStore({
-    state: {
+    state: () => ({
       count: 1,
       anotherData: "Hello world"
-    },
+    }),
     mutations: {
       SET_COUNT(state){
         state.count++
